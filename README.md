@@ -7,4 +7,3 @@ This is the repository storing scripts that is needed after installation of Cent
 - scripts : bash scripts가 모여있는 경로입니다.
 - python
 
-[test](scripts/test.md)
