@@ -10,5 +10,7 @@ This is the repository storing scripts that is needed after installation of Cent
 
 ~/.bashrc 파일에 아래줄이  설정되어 있어야 합니다
 
+```
 source ~/centos/env/init.env
 source ~/centos/env/help.env
+```
