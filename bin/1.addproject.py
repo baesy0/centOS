@@ -1,14 +1,14 @@
 #! /usr/bin/env python
 #coding:utf8
-import sys
 import os
+import sys
 
 def addProject(name):
 	"""
-	프로젝트를 생성하는 함수입니다
+	프로젝트 하위 경로를  생성하는 함수입니다
 	"""
 	root = "/project"
-	dirs = ["shot",
+	subDirs = ["shot",
 			"in",
 			"out",
 			"edit",
@@ -21,8 +21,10 @@ def addProject(name):
 			"doc",
 			"doc/concept"]
 
-	for d in dirs:
-		print root, name, d
+	for d in subDirs:
+		p = "/".join([root, name, d])
+		os.makedirs(p)
+
 
 if __name__ == "__main__":
 	if len(sys.argv) != 2:
