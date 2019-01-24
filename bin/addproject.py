@@ -1,31 +1,35 @@
-#!/usr/bin/env python
-
-import sys
+#! /usr/bin/env python
+#coding:utf8
 import os
+import sys
 
-pName = sys.argv[1]
+def addProject(name):
+	"""
+	프로젝트 하위 경로를  생성하는 함수입니다
+	"""
+	root = "/project"
+	subDirs = ["shot",
+			"in",
+			"out",
+			"edit",
+			"asset",
+			"asset/char",
+			"asset/shader",
+			"config",
+			"config/ocio",
+			"config/thumbnail",
+			"doc",
+			"doc/concept"]
 
-pStruct = ["asset", "config", "doc", "edit", "in", "out", "shot"]
-assetStruct = ["char", "shader"]
-configStruct = ["ocio", "thumbnail"]
-docStruct = ["concept"]
-
-projPath = "/project/" + pName
+	for d in subDirs:
+		p = "/".join([root, name, d])
+		os.makedirs(p)
 
 
-
-os.mkdir(projPath)
-for i in pStruct:
-	os.mkdir(projPath  + "/" + i)
-	subPath = projPath +"/" + i
-	if i == "asset":
-		for j in assetStruct:
-			os.mkdir(subPath +"/" + j)
-
-	elif i == "config":
-		for j in configStruct:
-			os.mkdir(subPath +"/" + j)
-
-	elif i == "doc":
-		for j in docStruct:
-			os.mkdir(subPath +"/" + j)
+if __name__ == "__main__":
+	if len(sys.argv) != 2:
+		print "How to use:"
+		print "$ addproject projectname"
+		sys.exit()
+	name = sys.argv[1]
+	addProject(name)
