@@ -14,17 +14,18 @@ projPath = "/project/" + pName
 
 
 
-os.mkdir(path)
+os.mkdir(projPath)
 for i in pStruct:
-	os.mkdir(path  + "/" + i)
+	os.mkdir(projPath  + "/" + i)
+	subPath = projPath +"/" + i
 	if i == "asset":
 		for j in assetStruct:
-			os.mkdir("/project/" + pName + "/" + i +"/" + j)
+			os.mkdir(subPath +"/" + j)
 
 	elif i == "config":
 		for j in configStruct:
-			os.mkdir("/project/" + pName + "/" + i +"/" + j)
-			
+			os.mkdir(subPath +"/" + j)
+
 	elif i == "doc":
 		for j in docStruct:
-			os.mkdir("/project/" + pName + "/" + i +"/" + j)
+			os.mkdir(subPath +"/" + j)
