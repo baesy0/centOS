@@ -15,8 +15,8 @@ fi
 cd ~/app
 git clone https://github.com/HandBrake/HandBrake.git
 cd HandBrake
-git tag --list | grep ^1\.1\.
+git tag --list | grep ^1\.1\. # 버전이 update되면 수정해야 할 부분
 git checkout refs/tags/
 ./configure --launch-jobs=16 --launch
-# make --directory=build install
+make --directory=build install
 rm -rf build
