@@ -10,6 +10,7 @@ yum -y install filezilla
 yum -y install tree
 yum -y install ImageMagick
 yum -y install mediainfo
+yum -y install gvim
 
 
 #ripgrep
