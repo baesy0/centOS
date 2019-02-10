@@ -16,8 +16,8 @@ source ~/centos/env/help.env
 ```
 or
 ```bash
-source ~/centos/env/pInit.env
-source ~/centos/env/pHelp.env
+source ~/centos/pEnv/pInit.env
+source ~/centos/pEnv/pHelp.env
 ```
 env폴더와 pEnv폴더에 있는 install.sh를 실행하면 각 폴더의 환경변수가 자동으로 추가됩니다.
 
