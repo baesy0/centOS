@@ -17,3 +17,11 @@ pip install --user Cython
   pip install --user xlwt
   pip install --user xlutils
   pip install --user pillow
+
+#edl 설치
+pip install --user timecode
+pip install --user edl
+
+#OTIO 설치
+pip install --user PySide2
+pip install --user opentimelineio
