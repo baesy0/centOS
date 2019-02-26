@@ -5,6 +5,8 @@ fi
 
 cd /home/$USER/app
 git clone https://github.com/alembic/alembic alembic_src
+cd alembic_src
+git tag
 git checkout 1.7.10
 cd ..
 mkdir alembic_build

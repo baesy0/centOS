@@ -1,5 +1,10 @@
 #install DJV View
 #!/bin/sh
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as Root" 1>&2
+	exit 1
+if
+
 yum -y remove DJV
 
 if [ ! -d '$HOME/tmp' ]; then
