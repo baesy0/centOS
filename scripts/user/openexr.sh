@@ -21,5 +21,6 @@ cd ../OpenEXR
 make
 make install
 
+rm v2.3.0.tar.gz
 #prefix 경로확인
 #~/app/openexr 경로에 bin, include, lib, share경로가 생기는 것 확인.

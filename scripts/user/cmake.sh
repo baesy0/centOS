@@ -16,3 +16,4 @@ cd /home/$USER/app/cmake-3.13.3_src
 ./configure --prefix="/home/bae/app/cmake-3.13.3"
 make
 make install
+rm /home/$USER/app/cmake-3.13.3.tar.gz
