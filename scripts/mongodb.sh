@@ -1,5 +1,8 @@
 #!/bin/sh
-
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as Root" 1>&2
+	exit 1
+fi
 echo "[mongodb-org-4.0]" >> /etc/yum.repos.d/mongodb-org.repo
 echo "name=MongoDB Repository"
 echo "baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/4.0/x86_64/"
